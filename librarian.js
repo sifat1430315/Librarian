@@ -9,13 +9,15 @@ var library = [
 
 /* Task 1 */
 function getBookTitle( index ){
-  //add code
+  return library[index].title;
 }
 
 console.log(getBookTitle(3));
 
 /* Task 3 */
 function addBook( book ){
+  library.push(book);
+  return library;
   //add code
 }
 
