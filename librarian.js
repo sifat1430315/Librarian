@@ -21,18 +21,31 @@ function addBook( book ){
   //add code
 }
 
-var newBook = {};
+var newBook = {title: "new book", year: "new year", author: "new author", publisher: "new publisher"};
 console.log(addBook(newBook));
 
 /* Task 4 */
 function bookByAuthor(){
+	library=library.sort(function (a,b){
+		return a.author.localeCompare(b.author);
+	});
+	return library;
   //add code
 }
 
 console.log(bookByAuthor());
 
 /* Task 5 */
-function findByTitle( title ){
+function findByTitle(name){
+	var value,n;
+	var found=[];
+
+	for (var i= 0; i<library.length; i++){
+		value = library[i].title;
+		n = value.toLowerCase().includes(name);
+		if (n) found.push(library[i]);
+	}
+	return found;
   //add code
 }
 
