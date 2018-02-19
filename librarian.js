@@ -14,6 +14,16 @@ function getBookTitle( index ){
 
 console.log(getBookTitle(3));
 
+/* Task 2 */
+
+function modifyLibrary( index ){
+	library[index] = {title: "Modified Library", year: "new year", author: "new author", publisher: "new publisher"};
+	return library;
+	
+}
+
+console.log(modifyLibrary(1));
+
 /* Task 3 */
 function addBook( book ){
   library.push(book);
@@ -26,10 +36,11 @@ console.log(addBook(newBook));
 
 /* Task 4 */
 function bookByAuthor(){
-	library=library.sort(function (a,b){
-		return a.author.localeCompare(b.author);
+	var newLibrary=library;
+	newLibrary.sort(function (a,b){
+	return a.author.localeCompare(b.author);
 	});
-	return library;
+	return newLibrary;
   //add code
 }
 
